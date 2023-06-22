@@ -1,28 +1,31 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import './Header.css'
-import {useContext } from "react";
- import ThemeContext from "../context/ThemeContext";
-  
-
+import "./Header.css";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Header = () => {
-  const {theme,changeTheme} = useContext(ThemeContext);
+  const { theme, changeTheme } = useContext(ThemeContext);
   return (
-    <div className="myheader" >
+    <div className="myheader">
       <header className="hide-when-mobile baker">
         <h1>
           <Link to="/">baker dandal</Link>
         </h1>
-        <button class="theme-btn" onClick={() => {
-        changeTheme(theme==="dark"?"light":"dark")  
-        }}>{theme}</button>
+        <button
+          class="theme-btn"
+          onClick={() => {
+            changeTheme(theme === "dark" ? "light" : "dark");
+          }}
+        >
+          {theme}
+        </button>
         <ul className="flex">
           <li className="main-list">
             <NavLink className="main-link" to="/html">
               HTML
             </NavLink>
-            
+
             <ul className="sub-ul">
               <li>
                 <a href="www">full course</a>
@@ -76,6 +79,14 @@ const Header = () => {
       </header>
       <header className="show-when-mobile baker">
         <h1>abou_dandal8</h1>
+        <button
+          class="theme-btn"
+          onClick={() => {
+            changeTheme(theme === "dark" ? "light" : "dark");
+          }}
+        >
+          {theme}
+        </button>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />
         </label>
