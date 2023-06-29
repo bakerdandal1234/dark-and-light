@@ -76,6 +76,9 @@ const Header = () => {
       </header>
       <header className="show-when-mobile baker">
         <h1>abou_dandal8</h1>
+         <button class="theme-btn" onClick={() => {
+        changeTheme(theme==="dark"?"light":"dark")  
+        }}>{theme}</button>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />
         </label>
