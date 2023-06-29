@@ -5,7 +5,7 @@ const initialData = { theme:  localStorage.getItem("mtTheme") === null
 ? "light"
 : localStorage.getItem("mtTheme") === "light"
 ? "light"
-: "dark", }; };
+: "dark", }; 
 const reducer = (state, action) => {
   switch (action.type) {
   
